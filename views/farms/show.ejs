@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=fdFarm.name%></title>
+</head>
+<body>
+    <h1><%=fdFarm.name%></h1>
+    <ul>
+        <li>city:<%=fdFarm.city%></li>
+        <li>email:<%=fdFarm.email%></li>
+    </ul>
+    <h2>Products</h2>
+    <ul>
+        <% for(let product of fdFarm.products){%>
+            <li><a href="/product/<%=product._id%>"><%=product.name%></a></li>
+        <%} %>
+    </ul>
+    <a href="/farms/<%=fdFarm.id%>/product/new">Add product</a>
+    <a href="/farms">All farms</a>
+   
+</body>
+</html>

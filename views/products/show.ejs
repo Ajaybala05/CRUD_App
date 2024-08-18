@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=Foundprod.name%></title>
+</head>
+<body>
+    <h1><%=Foundprod.name%></h1>
+    <li>price:<%=Foundprod.price%></li>
+    <li>category:<%=Foundprod.category%></li>
+    <li>Farm:<%=Foundprod.farm.name  %></li>
+    <a href="/product">All products</a>
+    <a href="/product/<%=Foundprod.id %>/edit">Edit</a>
+    <form class="d-inline" action="/product/<%=Foundprod._id%>?_method=DELETE"    method="POST">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+    <a href="/farms">Back to farm</a>
+</body>
+</html>
